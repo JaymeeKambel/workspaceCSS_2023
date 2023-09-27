@@ -9,19 +9,38 @@
 /* 00: css variables */
 :root{
 
-    --page-color: hsla(190, 51%, 65%, 0.95%)
+    --page-color: rgba(34, 130, 152, 0.01);
+    --body-color: rgba(33, 144, 21, 0.01);
+    --sidebar-color: rgba(0, 76, 91, 0.01);
+    --footbar-color: rgba(13, 47, 53, 0.01);
+    --tab-color: rgba(7, 48, 56, 0.01);
 }
 
 /* 01: color */
- html {
 
-    background-color: hsla(190, 51%, 65%, 0.95%);
-     padding: 5%;
+body {
+    background-color: var(--body-color);
+
+}
+aside.sidebar{
+
+    background-color: var(--sidebar-color);
+}
+#zen-intro{
+
+    background-color: var(--page-color);
 
 }
 
-body
-{
+#zen-suporting{
 
-
+    background-color: var(--page-color);
 }
+
+/* 02: Typography */
+
+
+/* 03: layout */
+
+
+
