@@ -1,0 +1,27 @@
+/*stle file created  by Jaymee Kambel 
+======================
+00: CSS variables
+01: color
+02: typography
+
+*/
+
+/* 00: css variables */
+:root{
+
+    --page-color: hsla(190, 51%, 65%, 0.95%)
+}
+
+/* 01: color */
+ html {
+
+    background-color: hsla(190, 51%, 65%, 0.95%);
+     padding: 5%;
+
+}
+
+body
+{
+
+
+}
