@@ -7,32 +7,31 @@
 */
 
 @font-face {
-    font-family: 'myfont' ;
+    font-family: 'myfont';
     src: url(../fonts/chunkfive.woff);
 
 }
 
-header h1{
-font-family: 'myfont' sans-serif;
-font-weight: 400;
-font-size: 1.25em;
-letter-spacing: 1px;
-line-height: 1em;
+header h1 {
+    font-family: 'myfont' sans-serif;
+    font-weight: 400;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    line-height: 1em;
 }
-h3{
 
-    font-family: 'ranchers',cursive;
+h3 {
+
+    font-family: 'ranchers', cursive;
     font-size: 1em;
 
 }
 
-a{
 
-}
 
 
 /* 00: css variables */
-:root{
+:root {
 
     --page-color: rgba(34, 130, 152, 0.01);
     --body-color: rgba(33, 144, 21, 0.01);
@@ -53,17 +52,19 @@ body {
     background-color: var(--body-color);
 
 }
-aside.sidebar{
+
+aside.sidebar {
 
     background-color: var(--sidebar-color);
 }
-#zen-intro{
+
+#zen-intro {
 
     background-color: var(--page-color);
 
 }
 
-#zen-suporting{
+#zen-suporting {
 
     background-color: var(--page-color);
 }
@@ -73,48 +74,65 @@ aside.sidebar{
 
 /* 03: layout */
 
-div.explanation, div.requirements, div.benefits, div.participation{
+div.explanation,
+div.requirements,
+div.benefits,
+div.participation {
 
-position:fixed;
-top: var(--page-position)
-width: (var(--page-width))
-padding: 2%;
-margin:10px;
-border
+    position: fixed;
+    top: var(--page-position) width: (var(--page-width)) padding: 2%;
+    margin: 10px;
+    background-image: url(../img/newspaper1.jpg);
+    transition: background-color 2s ease-in-out;
 
-background-image: url(../img/newspaper1.jpg)
 
 
 }
-div.explanation{
+
+div.explanation {
 
     left: 0%;
 
 }
 
-div.requirements{
+div.requirements {
 
-    left:12vw;
+    left: 12vw;
 
 
 
 }
-div.benefits{
+
+div.benefits {
 
     left: 24vw;
 }
 
-div.participation{
+div.participation {
 
     left: 35vw;
 }
 
-div.explanation h3{
+div.explanation h3,
+div.requirements h3,
+div.benefits h3,
+div.participation h3 {
 
     margin-top: -15%;
-    width:var(--tab-width);
+    width: var(--tab-width);
     height: var(--tab-height);
     background-color: (var(--tab-color));
+    border-top-left-radius: 50px;
+    border-top-right-radius: 20px 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 2s ease-in-out;
+}
+
+div.explanation h3:hover {
+    background-color: var(--footbar-color);
 }
 
 
@@ -122,39 +140,39 @@ div.explanation h3{
 
 
 
-aside.sidebar{
- 
+aside.sidebar {
+
     position: absolute;
     top: 100px;
     width:
 
 }
 
-    /* footer -- try it outside of class */
-    /* introduction in the middle */
-    section.intro{
+/* footer -- try it outside of class */
+/* introduction in the middle */
+section.intro {
 
-        position:fixed;
-        top: 0;
-        left: 30%;
-        width: 30%;
-        height: 80%;
-        padding: 2%;
-        background-image: url(../img/newspaper3.jpg);
-        transform: rotate(20deg) translate(-100px,0);
-    }
+    position: fixed;
+    top: 0;
+    left: 30%;
+    width: 30%;
+    height: 80%;
+    padding: 2%;
+    background-image: url(../img/newspaper3.jpg);
+    transform: rotate(20deg) translate(-100px, 0);
+}
 
-   /*; other declaration */
- 
- a:hover{
+/*; other declaration */
+
+a:hover {
 
     font-size: 1.2em;
     text-indent: -100px;
 
- }
+}
 
- 
- p::first-letter{
+
+p::first-letter {
     font: size 2em;
     font-style: italic;
 }
@@ -168,4 +186,88 @@ div {
     margin: 2rem;
     padding: 1rem;
     outline-offset: 0.5rem;
-  }
+}
+
+/* 05: more practice on transition*/
+
+section.intro h3~p {
+
+    opacity: 1;
+    transition: all 3s ease-in-out;
+
+}
+
+section.intro h3:hover~p {
+
+    opacity: 0;
+    transform: scale(0.2);
+
+
+}
+
+/*06 animation */
+
+footer {
+    animation: 10s ease-in-out 2s alternate infinite moveback;
+
+}
+
+@keyframes moveback {
+    from {
+        transform: translate(-500px, 0);
+    }
+    30% {
+        transform: translate(-300px, 0px);
+    }
+    50% {
+        transform: translate(0px, 0px);
+    }
+    70% {
+        transform: translate(300px, 0px);
+    }
+    90% {
+        transform: translate(500px, 0px);
+    }
+
+
+}
+
+h2{
+
+    background-image: linear-gradient(blue,black,white);
+    animation: 4s infinite running changecolor;
+
+}
+@keyframes changecolor{
+    from{background-image: linear-gradient(purple,white,yellow);}
+}
+
+/*07: fancy features*/
+div.extra1{
+
+    border-image: linear-gradient(blue,red) 10 / 15px round;
+}
+
+
+
+aside.sidebar{
+    font-size: 0.8em;
+    clip-path:polygon(0  0,0 70%, 50% 100%, 100% 70%, 100%, 0);
+}
+
+div#design-archives{
+
+    display: none;
+
+}
+
+aside.sidebar h3{
+display: none;
+
+}
+
+aside.sidebar ul li{
+
+    list-style: none;
+}
+
